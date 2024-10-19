@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+            font-family:sans-serif;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 100px;
+            background-color: #ffcc00;
+        }
+        .card{
+            width:450px;
+            height: 300px;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            box-shadow:1px 4px 8px rgba(0,0,0,0.3);
+            border-radius: 1em;
+        }
+        .card img{
+            width: 100%;
+            height: 100%;
+            border-radius: 1em;
+            transition: all .2s ease-in-out;
+        }
+        .card:hover img{
+            transform: scaley(1.1);
+        }
+        .content{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right:0;
+            bottom: 0;
+            background:linear-gradient(#f9f9f980,hwb(48 0% 0% / 0.651));
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .card:hover .content{
+            opacity:1;
+        }
+        .content{
+            padding: 0px 30px;
+            color:rgba(2, 5, 5, 0.753);
+        }
+        .content h1{
+            font-size:50px;
+            color:black;
+        }
+        .content p{
+            margin:10px 0px;
+            font-size: 17px;
+        }
+        @media (max-width:768px){
+            .card{
+            margin:10px;}
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="winter.jpg">
+            <div class="content">
+                <h1>Winter</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolorum, voluptatibus error explicabo id culpa, asperiores vitae ipsam eos rem consectetur obcaecati, quisquam eaque ea.</p>
+            </div>
+    </div>
+</body>
+</html>
